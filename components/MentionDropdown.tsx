@@ -48,7 +48,10 @@ import React, { useEffect, useRef } from 'react';
           {mentions.map((mention, index) => (
             <li
               key={mention.id}
-              onClick={() => onSelect(mention)}
+              onClick={() => {
+                console.log("Mention clicked:", mention);
+                onSelect(mention);
+              }}
               style={{
                 cursor: 'pointer',
                 padding: '5px 10px',
